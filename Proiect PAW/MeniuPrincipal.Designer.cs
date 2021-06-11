@@ -44,6 +44,8 @@ namespace Proiect_PAW
             this.exportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fisierTextToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exempleDDClipboardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.graficToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tabeleBazeDeDateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lvPrescriptii = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -63,7 +65,8 @@ namespace Proiect_PAW
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label3 = new System.Windows.Forms.Label();
-            this.graficToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.ceas1 = new Proiect_PAW.Ceas();
             this.menuStrip1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -76,7 +79,8 @@ namespace Proiect_PAW
             this.deserializariToolStripMenuItem,
             this.exportToolStripMenuItem,
             this.exempleDDClipboardToolStripMenuItem,
-            this.graficToolStripMenuItem});
+            this.graficToolStripMenuItem,
+            this.tabeleBazeDeDateToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1327, 24);
@@ -181,6 +185,20 @@ namespace Proiect_PAW
             this.exempleDDClipboardToolStripMenuItem.Size = new System.Drawing.Size(156, 20);
             this.exempleDDClipboardToolStripMenuItem.Text = "Exemple DnD + Clipboard";
             this.exempleDDClipboardToolStripMenuItem.Click += new System.EventHandler(this.exempleDDClipboardToolStripMenuItem_Click);
+            // 
+            // graficToolStripMenuItem
+            // 
+            this.graficToolStripMenuItem.Name = "graficToolStripMenuItem";
+            this.graficToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
+            this.graficToolStripMenuItem.Text = "Grafic";
+            this.graficToolStripMenuItem.Click += new System.EventHandler(this.graficToolStripMenuItem_Click);
+            // 
+            // tabeleBazeDeDateToolStripMenuItem
+            // 
+            this.tabeleBazeDeDateToolStripMenuItem.Name = "tabeleBazeDeDateToolStripMenuItem";
+            this.tabeleBazeDeDateToolStripMenuItem.Size = new System.Drawing.Size(122, 20);
+            this.tabeleBazeDeDateToolStripMenuItem.Text = "Tabele Baze de Date";
+            this.tabeleBazeDeDateToolStripMenuItem.Click += new System.EventHandler(this.tabeleBazeDeDateToolStripMenuItem_Click);
             // 
             // lvPrescriptii
             // 
@@ -322,12 +340,12 @@ namespace Proiect_PAW
             this.label3.TabIndex = 18;
             this.label3.Text = "Medici";
             // 
-            // graficToolStripMenuItem
+            // ceas1
             // 
-            this.graficToolStripMenuItem.Name = "graficToolStripMenuItem";
-            this.graficToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
-            this.graficToolStripMenuItem.Text = "Grafic";
-            this.graficToolStripMenuItem.Click += new System.EventHandler(this.graficToolStripMenuItem_Click);
+            this.ceas1.Location = new System.Drawing.Point(535, 44);
+            this.ceas1.Name = "ceas1";
+            this.ceas1.Size = new System.Drawing.Size(129, 55);
+            this.ceas1.TabIndex = 19;
             // 
             // MeniuPrincipal
             // 
@@ -335,6 +353,7 @@ namespace Proiect_PAW
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1327, 620);
             this.ContextMenuStrip = this.contextMenuStrip1;
+            this.Controls.Add(this.ceas1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lvMedici);
             this.Controls.Add(this.label2);
@@ -389,6 +408,9 @@ namespace Proiect_PAW
         private System.Windows.Forms.ToolStripMenuItem fisierTextToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exempleDDClipboardToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem graficToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tabeleBazeDeDateToolStripMenuItem;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private Ceas ceas1;
     }
 }
 

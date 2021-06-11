@@ -161,5 +161,11 @@ namespace Proiect_PAW
             MeniuGrafic graf = new MeniuGrafic(listaMedici,listaPacienti,listaPrescriptii);
             graf.ShowDialog();
         }
+
+        private void tabeleBazeDeDateToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MeniuSpitale meniu = new MeniuSpitale();
+            meniu.ShowDialog();
+        }
     }
 }
